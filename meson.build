@@ -1,0 +1,2 @@
+project('sonic')
+subdir('engine')
