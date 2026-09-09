@@ -1,0 +1,37 @@
+BasedOnStyle: LLVM
+Language: Cpp
+Standard: c++20
+
+IndentWidth: 2
+TabWidth: 2
+UseTab: Never
+ColumnLimit: 100
+
+PointerAlignment: Left
+ReferenceAlignment: Left
+
+BreakBeforeBraces: Attach
+AllowShortFunctionsOnASingleLine: Inline
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortLoopsOnASingleLine: false
+
+AlignConsecutiveAssignments: Consecutive
+AlignConsecutiveDeclarations: None
+AlignTrailingComments: true
+
+IncludeBlocks: Regroup
+IncludeCategories:
+    - Regex: '^"' # header
+      Priority: 1
+    - Regex: "^<[a-z_]+>" # C++ std: <vector>
+      Priority: 3
+    - Regex: '^<.*\.h>' # C: <stdint.h>
+      Priority: 2
+    - Regex: ".*"
+      Priority: 4
+SortIncludes: CaseSensitive
+
+SpaceAfterCStyleCast: false
+SpacesBeforeTrailingComments: 2
+KeepEmptyLinesAtTheStartOfBlocks: false
+MaxEmptyLinesToKeep: 1
