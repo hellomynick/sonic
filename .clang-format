@@ -35,3 +35,6 @@ SpaceAfterCStyleCast: false
 SpacesBeforeTrailingComments: 2
 KeepEmptyLinesAtTheStartOfBlocks: false
 MaxEmptyLinesToKeep: 1
+NamespaceIndentation: All
+ReflowComments: true
+CommentPragmas: "^ IWYU pragma:"

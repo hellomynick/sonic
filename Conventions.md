@@ -38,19 +38,13 @@ Write C++ in a C style: prefer simple and predictable over abstract.
 
 ## 3. Naming
 
-Use **prefixes** instead of namespaces (C style).
+| Types      | PascalCase, no prefix | `Side`, `Level`, `OrderNode`, `OrderBook` |
+| Aliases    | PascalCase            | `Idx` |
+| Constants  | UPPER_CASE            | `NONE` |
+| Functions  | snake_case            | `add_limit` |
+| Members    | trailing `_`          | `pool_`, `best_bid_` |
 
-| Kind | Rule | Example |
-|---|---|---|
-| Generic types likely to clash | `Ob` + PascalCase | `ObSide`, `ObLevel`, `ObOrderNode` |
-| Distinctive types | PascalCase, no prefix | `OrderBook`, `SymbolEngine` |
-| Type aliases | `ob_` + snake_case | `ob_idx` |
-| Functions, variables, members | snake_case | `add_limit`, `free_node_` |
-| Private members | trailing `_` | `pool_`, `best_bid_` |
-| Constants | `OB_` + UPPER_CASE | `OB_NONE` |
-| Files | snake_case | `order_book.hpp` |
-
-Rust keeps standard Rust conventions (`snake_case` functions, `PascalCase` types).
+All engine core code lives in `namespace ob`.
 
 ## 4. Numeric types
 
